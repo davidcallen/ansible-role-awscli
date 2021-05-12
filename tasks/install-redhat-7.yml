@@ -26,5 +26,6 @@
   pip:
     name: "{{ cli_package }}"
     state: present
+    executable: "{{ pip_executable_override | default('pip') }}"
   tags:
     - install
