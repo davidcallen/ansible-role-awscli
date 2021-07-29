@@ -22,6 +22,9 @@
   tags:
     - install
 
+- name: "Upgrade pip"
+  shell: "{{ pip_executable_override | default('pip') }} install --upgrade pip"
+
 - name: Install {{ cli_package }}
   pip:
     name: "{{ cli_package }}"
